@@ -19,6 +19,16 @@ function buildFullName(data) {
   // Station14の問題はこちらです。想定する答えをここを書いてください。
   // 氏名がわかるようにしつつ、半角スペースで繋いでください。
   // またtest配列のそれぞれのオブジェクトに対して、full_nameのプロパティが追加されるように実装すること
+  var expect = new Object()
+  let full_name_expect = data.family_name + ' ' + data.first_name
+
+  expect.id = data.id
+  expect.first_name = data.first_name
+  expect.family_name = data.family_name
+  expect.full_name = full_name_expect
+  expect.affilication = data.affilication
+  expect.is_student = data.is_student
+  return expect
 }
 
 // 出力が想定される答え
